@@ -3,7 +3,7 @@ import './Navbar.css'
 import { assets } from '../../assets/assets'
 import { Link, useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../Context/StoreContext'
-import NotificationBell from '../Notifications/NotificationBell';
+// import NotificationBell from '../Notifications/NotificationBell';
 
 const Navbar = ({ setShowLogin }) => {
 
@@ -20,8 +20,11 @@ const Navbar = ({ setShowLogin }) => {
   return (
     <div className='navbar'>
       <Link to='/'><img className='logo' src={assets.logo} alt="" /></Link>
+   
+      {/* <NotificationBell /> */}
       <ul className="navbar-menu">
-      <NotificationBell />
+      
+    
         <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>home</Link>
         <a href='#explore-menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>menu</a>
         <a href='#app-download' onClick={() => setMenu("mob-app")} className={`${menu === "mob-app" ? "active" : ""}`}>mobile app</a>

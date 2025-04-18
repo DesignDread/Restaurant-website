@@ -17,7 +17,7 @@ const NotificationBell = () => {
 
   // Create an axios instance inline instead of importing `api`
   const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'http://localhost:4000/api',
     headers: { 'Content-Type': 'application/json' }
   });
 
@@ -60,7 +60,7 @@ const NotificationBell = () => {
     }
   };
 
-  if (!user) return null; // or a login prompt
+//   if (!user) return null; // or a login prompt
 
   return (
     <div className="notification-bell-container">
@@ -73,7 +73,7 @@ const NotificationBell = () => {
         <div className="notification-dropdown">
           <h3>Notifications</h3>
           {notifications.length === 0 ? (
-            <p className="no-notifications">No notifications yet</p>
+            <p className="no-notifications" >No notifications yet</p>
           ) : (
             <>
               <ul className="notification-list">
@@ -105,3 +105,5 @@ const NotificationBell = () => {
 };
 
 export default NotificationBell;
+
+

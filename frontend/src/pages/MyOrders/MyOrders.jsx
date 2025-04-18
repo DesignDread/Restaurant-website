@@ -3,6 +3,7 @@ import './MyOrders.css'
 import axios from 'axios'
 import { StoreContext } from '../../Context/StoreContext';
 import { assets } from '../../assets/assets';
+// import NotificationPreferences from '../../components/Profile/NotificationPrefrences';
 
 const MyOrders = () => {
   
@@ -45,6 +46,7 @@ const MyOrders = () => {
           )
         })}
       </div>
+      {/* <NotificationPreferences/> */}
     </div>
   )
 }
