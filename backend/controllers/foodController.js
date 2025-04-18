@@ -28,7 +28,9 @@ const addFood = async (req, res) => {
         })
 
         await food.save();
+        console.log("food");
         res.json({ success: true, message: "Food Added" })
+        console.log("hiii");
     } catch (error) {
         console.log(error);
         res.json({ success: false, message: "Error" })

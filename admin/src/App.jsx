@@ -7,6 +7,7 @@ import List from './pages/List/List'
 import Orders from './pages/Orders/Orders'
 import { ToastContainer } from 'react-toastify';
 import Reservation from './components/Reservation/Reservation'
+import ContactUsForm from './pages/Contact/ContactList'
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/list" element={<List />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/reservation" element={<Reservation/>} />
+          <Route path="/contact" element={<ContactUsForm/>} />
         </Routes>
       </div>
     </div>

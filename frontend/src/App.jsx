@@ -10,7 +10,7 @@ import MyOrders from './pages/MyOrders/MyOrders'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify/Verify'
-
+import Contact from './components/ContactUsForm'
 const App = () => {
 
   const [showLogin,setShowLogin] = useState(false);
@@ -27,6 +27,7 @@ const App = () => {
           <Route path='/order' element={<PlaceOrder />}/>
           <Route path='/myorders' element={<MyOrders />}/>
           <Route path='/verify' element={<Verify />}/>
+          <Route path='/contact' element={<Contact />}/>
         </Routes>
       </div>
       <Footer />

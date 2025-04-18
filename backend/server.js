@@ -6,6 +6,7 @@ import foodRouter from "./routes/foodRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 import reservationRouter from "./routes/reservationRoute.js";
+import contactrouter from "./routes/contactRoute.js"
 import "dotenv/config";
 
 // app config
@@ -28,6 +29,7 @@ app.use("/api/order", orderRouter);
 // app.use("/api/reservations", reservationRouter);
 console.log("🔌 Mounting reservation routes on /api/reservations");
 app.use("/api/reservations", reservationRouter);
+app.use('/api', contactrouter);
 
 app.get("/", (req, res) => {
   res.send("API Working");
