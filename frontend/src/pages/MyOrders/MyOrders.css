@@ -14,7 +14,7 @@
     gap: 30px;
     font-size: 14px;
     padding: 10px 20px;
-    color: #454545;
+    color: white;
     border: 1px solid tomato;
 }
 .my-orders-order img{
@@ -25,7 +25,7 @@
 }
 .my-orders-order p b{
     font-weight: 500;
-    color: #454545;
+    color: white;
 }
 .my-orders button{
     border: none;
@@ -33,7 +33,7 @@
     border-radius: 4px;
     background-color: #FFE1E1;
     cursor: pointer;
-    color: #454545;
+    color: white;
 }
 @media (max-width:900px) {
     .my-orders-order{

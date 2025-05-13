@@ -8,6 +8,9 @@ import Orders from './pages/Orders/Orders'
 import { ToastContainer } from 'react-toastify';
 import Reservation from './components/Reservation/Reservation'
 import ContactUsForm from './pages/Contact/ContactList'
+import AdminNotificationPanel from './components/NotificationPannel/NotificationPannel'
+import SubscribersList from './components/Subscriber/SubscriberList'
+import SendEmail from './components/Subscriber/SubscriberEmail'
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
@@ -24,6 +27,9 @@ const App = () => {
           <Route path="/orders" element={<Orders />} />
           <Route path="/reservation" element={<Reservation/>} />
           <Route path="/contact" element={<ContactUsForm/>} />
+          <Route path="/NotficationPannel" element={<AdminNotificationPanel/>} />
+          <Route path="/subscribers" element={<SubscribersList/>} />
+          <Route path="/send-email" element={<SendEmail/>} />
         </Routes>
       </div>
     </div>

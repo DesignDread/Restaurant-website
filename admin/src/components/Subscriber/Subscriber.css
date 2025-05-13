@@ -1,0 +1,259 @@
+
+  
+  /* src/components/SubscribersList.css */
+  .subscribers-container {
+    padding: 20px 0;
+  }
+  
+  .subscribers-container h2 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .subscribers-loading, .subscribers-error, .no-subscribers {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  .subscribers-error {
+    color: #e74c3c;
+  }
+  
+  .subscribers-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .bulk-delete-button, .refresh-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .bulk-delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+  }
+  
+  .bulk-delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .bulk-delete-button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .refresh-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+  }
+  
+  .refresh-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .subscribers-table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  .subscribers-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subscribers-table th,
+  .subscribers-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .subscribers-table th {
+    background-color: #34495e;
+    color: white;
+  }
+  
+  .subscribers-table tr:hover {
+    background-color: #f5f6fa;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .send-email-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .send-email-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .send-email-button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* src/components/SendEmail.css */
+  .send-email-container {
+    padding: 20px 0;
+  }
+  
+  .send-email-container h2 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .send-email-loading, 
+  .send-email-error, 
+  .send-email-success {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .send-email-loading {
+    background-color: #f8f9fa;
+  }
+  
+  .send-email-error {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .send-email-success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .send-email-form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .selected-recipients, .no-selection {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .recipients-list {
+    margin: 10px 0;
+    padding-left: 20px;
+    max-height: 120px;
+    overflow-y: auto;
+  }
+  
+  .recipients-list li {
+    margin-bottom: 5px;
+  }
+  
+  .send-to-all-option {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+  }
+  
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .form-hint {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .cancel-button, .send-button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .cancel-button {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+  }
+  
+  .cancel-button:hover {
+    background-color: #7f8c8d;
+  }
+  
+  .send-button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+  }
+  
+  .send-button:hover {
+    background-color: #27ae60;
+  }
+  
+  .send-button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }

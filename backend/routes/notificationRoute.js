@@ -1,25 +1,14 @@
-// backend/routes/notificationRoutes.js
+// routes/notificationRoutes.js
 import express from 'express';
-import { 
-  sendOrderConfirmation, 
-  sendOrderStatusUpdate, 
-  sendPromotionalEmail, 
-  getNotifications, 
-  markAsRead 
-} from '../controllers/notificationController.js';
-import { verifyToken, isAdmin } from '../middleware/auth.js';
+import { sendUserNotification, sendBulkNotifications } from '../controllers/notificationController.js';
 
-const router = express.Router();
 
-// Order notifications
-router.post('/orders/:orderId/confirm', verifyToken, sendOrderConfirmation);
-router.post('/orders/:orderId/status', verifyToken, sendOrderStatusUpdate);
+const notificationRoute = express.Router();
 
-// Promotional emails
-router.post('/promotions/:promotionId/send', verifyToken, isAdmin, sendPromotionalEmail);
+// Route to send a notification to a specific user
+notificationRoute.post('/send',  sendUserNotification);
 
-// User notifications
-router.get('/users/:userId/notifications', verifyToken, getNotifications);
-router.patch('/notifications/:notificationId/read', verifyToken, markAsRead);
+// Route to send notifications to multiple users or all users
+notificationRoute.post('/bulk',  sendBulkNotifications);
 
-export default router;
+export default notificationRoute;

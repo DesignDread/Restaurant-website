@@ -7,7 +7,11 @@ import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 import reservationRouter from "./routes/reservationRoute.js";
 import contactrouter from "./routes/contactRoute.js"
+import notificationRoute from "./routes/notificationRoute.js"
+import subscriberRoutes from "./routes/subscriberRoutes.js";
+import emailRoutes from "./routes/emailRoute.js";
 import "dotenv/config";
+
 
 // app config
 const app = express();
@@ -30,9 +34,17 @@ app.use("/api/order", orderRouter);
 console.log("🔌 Mounting reservation routes on /api/reservations");
 app.use("/api/reservations", reservationRouter);
 app.use('/api', contactrouter);
+app.use('/api/notifications', notificationRoute);
+app.use('/api/subscribers', subscriberRoutes);
+app.use('/api/emails', emailRoutes);
 
 app.get("/", (req, res) => {
   res.send("API Working");
 });
+
+
+
+console.log(process.env.EMAIL_PASS)
+console.log(process.env.EMAIL_USER)
 
 app.listen(port, () => console.log(`Server started on http://localhost:${port}`));
